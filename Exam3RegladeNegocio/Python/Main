@@ -1,0 +1,12 @@
+from ec.edu.espe.payroll.view.frm_payroll import FrmPayroll
+from ec.edu.espe.payroll.controller.payroll_controller import PayrollController
+
+if __name__ == "__main__":
+    # 1. Crear Vista
+    app = FrmPayroll()
+    
+    # 2. Conectar Controlador
+    controller = PayrollController(app)
+    
+    # 3. Iniciar
+    app.mainloop()
