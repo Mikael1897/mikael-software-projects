@@ -1,21 +1,18 @@
 package ec.edu.espe.farmsystem.model;
 
-import javax.tools.DocumentationTool.Location;
-import javax.tools.JavaFileManager;
-
 /**
  *
- * @author Steven Loza
+ * @author Mikael Hidalgo, Object Masters, @ESPE
  */
 public class Cage {
-
-    private int id;
+    private int id ;
     private String description;
-    private int type; // 1 coop, 2 stable, 3 pens
-    private Location location;
+    private int type; // 1 coop 2 stable 3 pens 
 
-    public Cage(int i, String satble_for_cows, int i0, JavaFileManager.Location Location) {
-   
+    private Location location; 
+
+    public Cage(int i, String for_cows, int i0, Location location) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
@@ -23,13 +20,18 @@ public class Cage {
         return "Cage{" + "id=" + id + ", description=" + description + ", type=" + type + ", location=" + location + '}';
     }
 
-    public Cage(int id, String description, int type, Location location) {
+    
+    
+    
+    public class Cage(int id, String description, int type, Location location) {
         this.id = id;
         this.description = description;
         this.type = type;
         this.location = location;
     }
 
+    
+    
     
     /**
      * @return the id
@@ -86,7 +88,8 @@ public class Cage {
     public void setLocation(Location location) {
         this.location = location;
     }
-
    
+
+
 
 }

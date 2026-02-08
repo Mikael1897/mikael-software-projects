@@ -1,43 +1,56 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.farmsystem.model;
 
 /**
  *
- * @author Mikael Hidalgo @ESPE
+ * @author Mikael Hidalgo, Object Masters, @ESPE
  */
-public class location {
-    private int xcordinate;
-    private int ycordinate;
-
-    /**
-     * @return the xcordinate
-     */
-    public int getXcordinate() {
-        return xcordinate;
-    }
-
-    /**
-     * @param xcordinate the xcordinate to set
-     */
-    public void setXcordinate(int xcordinate) {
-        this.xcordinate = xcordinate;
-    }
-
-    /**
-     * @return the ycordinate
-     */
-    public int getYcordinate() {
-        return ycordinate;
-    }
-
-    /**
-     * @param ycordinate the ycordinate to set
-     */
-    public void setYcordinate(int ycordinate) {
-        this.ycordinate = ycordinate;
-    }
+public class Location {
     
+   private int xCordinate;
+   private int yCordinate;
+
+    @Override
+    public String toString() {
+        return "Location{" + "xCordinate=" + xCordinate + ", yCordinate=" + yCordinate + '}';
+    }
+
+   
+   
+   public Location(int xCordinate, int yCordinate) {
+        this.xCordinate = xCordinate;
+        this.yCordinate = yCordinate;
+    }
+
+   
+   
+   
+   /**
+     * @return the xCordinate
+     */
+    public int getxCordinate() {
+        return xCordinate;
+    }
+
+    /**
+     * @param xCordinate the xCordinate to set
+     */
+    public void setxCordinate(int xCordinate) {
+        this.xCordinate = xCordinate;
+    }
+
+    /**
+     * @return the yCordinate
+     */
+    public int getyCordinate() {
+        return yCordinate;
+    }
+
+    /**
+     * @param yCordinate the yCordinate to set
+     */
+    public void setyCordinate(int yCordinate) {
+        this.yCordinate = yCordinate;
+    }
+   
+   
 }

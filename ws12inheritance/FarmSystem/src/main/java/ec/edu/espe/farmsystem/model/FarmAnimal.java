@@ -1,31 +1,27 @@
 package ec.edu.espe.farmsystem.model;
 
 import java.util.Date;
-import javax.xml.stream.Location;
 
 /**
  *
- * @author Mikael Hidalgo, ENCAPSULATED KNOWLEDGE
+ * @author Mikael Hidalgo, Object Masters, @ESPE
  */
-public abstract class FarmAnimal {
-
+public class FarmAnimal {
     private int id;
     private String breed;
     private Date bornOn;
     private String gender;
     private boolean isAbleToReproduce;
     private float weight;
-    private Cage cage;
+    private Cage cage; 
 
-    public int getAgeInMonths() {
-        //TODO compute the age in month
-        return 0;
+    @Override
+    public String toString() {
+        return "FarmAnimal{" + "id=" + id + ", breed=" + breed + ", bornOn=" + bornOn + ", gender=" + gender + ", isAbleToReproduce=" + isAbleToReproduce + ", weight=" + weight + ", cage=" + cage + '}';
     }
 
-    public void assignCage(Cage cage) {
-        this.setCage(cage);
-    }
-
+   
+    
     public FarmAnimal(int id, String breed, Date bornOn, String gender, boolean isAbleToReproduce, float weight, Cage cage) {
         this.id = id;
         this.breed = breed;
@@ -35,13 +31,18 @@ public abstract class FarmAnimal {
         this.weight = weight;
         this.cage = cage;
     }
-
-    @Override
-    public String toString() {
-        return "FarmAnimal{" + "id=" + id + ", breed=" + breed + ", bornOn=" + bornOn + ", gender=" + gender + ", isAbleToReproduce=" + isAbleToReproduce + ", weight=" + weight + ", cage=" + cage + '}';
+   
+   
+    
+    public int getAgeInMonths(){
+       //TODO compute age in the months
+        return 0;
+    }
+    
+    public void assignCage(Cage cage){
+        this.cage=cage;
     }
 
-    
     /**
      * @return the id
      */

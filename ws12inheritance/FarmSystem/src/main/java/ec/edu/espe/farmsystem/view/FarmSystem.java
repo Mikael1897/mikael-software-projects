@@ -3,60 +3,58 @@ package ec.edu.espe.farmsystem.view;
 import ec.edu.espe.farmsystem.model.Cage;
 import ec.edu.espe.farmsystem.model.Chicken;
 import ec.edu.espe.farmsystem.model.FarmAnimal;
-import javax.tools.JavaFileManager.Location;
+import ec.edu.espe.farmsystem.model.Location;
+import ec.edu.espe.farmsystem.model.Pig;
+import ec.edu.espe.farmsystem.model.Sheep;
 import java.util.Date;
 
 /**
  *
- * @author Mikael Hidalgo
+ * @author Mikael Hidalgo, Object Masters, @ESPE
  */
-public  abstract class FarmSystem {
-    public static void main (String[] args){
+public class FarmSystem {
+    
+    public static void main(String[] args) {
         
-    int id = 0;
-    String breed;
-    Date bornOn;
-    String gender;
-    boolean isAbleToReproduce = false;
-    float weight;
-    Cage cage;
-    Location Location;
-    int xCoordinate;
-    int yCoordinate;
-    weight = 10.4F;
-    gender ="male";
-    
-    
-    
-    xCoordinate = 20;
-    yCoordinate = 10;
-    
-    bornOn = new Date(2025, 2, 1);
-    breed = "Holstein";
-    Location = new LocationImpl (xCoordinate, yCoordinate);
-    cage = new Cage(1, "satble for cows",2, Location);
-    
-    
-        FarmAnimal farmAnimal;  
+        int id; 
+        String breed;
+        Date bornOn;
+        String gender;
+        boolean isAbleToReproduce;
+        float weight;
+        Cage cage;
+        Location location;
+        int xCoordinate;
+        int yCoordinate;
         
-        farmAnimal=new Chicken(true, 0,1, breed, bornOn, gender, isAbleToReproduce, weight, cage);
+        xCoordinate=10;
+        yCoordinate=20;
+        weight = 10.4F;
+        bornOn= new Date(2025,2,1);
+        breed="Holsterin";
+        gender="male";
+        isAbleToReproduce=false;
         
-        System.out.println("farmanimal -->"+farmAnimal);
+        location= new Location (xCoordinate, yCoordinate);
+        cage= new Cage(1, "for cows", 2, location);
+        
+        FarmAnimal farmAnimal;
+       
+        farmAnimal= new Chicken(false, 1, 1, breed, bornOn, gender, isAbleToReproduce, weight, cage);
+        System.out.println("farmAnimal Chicken-----> " + farmAnimal);
+        
+        farmAnimal = new Cow(true, 12.5F, 2, "Holstein", bornOn, "female", true, 500.0F, cage);
+        System.out.println("farmAnimal (Cow) -> " + farmAnimal);
+        
+        farmAnimal = new Pig(3, "Landrace", bornOn, "male", true, 150.0F, cage);
+        System.out.println("farmAnimal (Pig) -> " + farmAnimal);
+        
+        Date shearingDate = new Date(2025 - 1900, 4, 15); 
+        
+        farmAnimal = new Sheep(shearingDate, 4, "Merino", bornOn, "female", true, 70.5F, cage);
+        System.out.println("farmAnimal (Sheep) -> " + farmAnimal);
+        
     }
-
-    private static class LocationImpl implements Location {
-
-        public LocationImpl(int xCoordinate, int yCoordinate) {
-        }
-
-        @Override
-        public String getName() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        @Override
-        public boolean isOutputLocation() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-    }
+    
+    
 }

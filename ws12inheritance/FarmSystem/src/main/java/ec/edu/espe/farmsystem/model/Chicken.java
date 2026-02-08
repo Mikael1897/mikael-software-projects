@@ -4,32 +4,32 @@ import java.util.Date;
 
 /**
  *
- * @author Mikael Hidalgo
+ * @author Mikael Hidalgo, Object Masters, @ESPE
  */
 public class Chicken extends FarmAnimal {
     private boolean isMolting;
     private int laidEggs;
 
-    public Chicken(int id, String breed, Date bornOn, String gender, boolean isAbleToReproduce, float weight, Cage cage) {
-        super(id, breed, bornOn, gender, isAbleToReproduce, weight, cage);
+    public class Chicken(boolean b, int i, int i0, String breed, Date bornOn, String gender, boolean ableToReproduce, float weight, Cage cage) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+    public String toString() {
+        return "Chicken{" + "isMolting=" + isMolting + ", laidEggs=" + laidEggs +","+ super.toString()+'}';
+    }
+
+    
+    
     public Chicken(boolean isMolting, int laidEggs, int id, String breed, Date bornOn, String gender, boolean isAbleToReproduce, float weight, Cage cage) {
         super(id, breed, bornOn, gender, isAbleToReproduce, weight, cage);
         this.isMolting = isMolting;
         this.laidEggs = laidEggs;
-    }
-
-    @Override
-    public String toString() {
-        return "Chicken{" + "isMolting=" + isMolting + ", laidEggs=" + laidEggs+"," + super.toString() + '}';
     }
     
     
     
     public void layAnEgg(){
         setLaidEggs(getLaidEggs() + 1);
-        
     }
 
     /**
